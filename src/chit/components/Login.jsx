@@ -82,14 +82,14 @@ const Login = () => {
     >
       <div className="w-full max-w-md bg-white shadow-lg rounded-[16px] p-6">
         <div className="text-center mb-1  flex justify-center py-3">
-          <img src={Logo} alt="" srcSet="" className="h-25 w-52 object-fill" />
+          <img src={Logo} alt="" srcSet="" className="h-20 w-45 object-fill" />
         </div>
         <div className="text-center py-3">
           <h1 className="text-2xl font-bold text[#232323]">Sign-In</h1>
         </div>
         <div className="flex justify-center mb-4 -mt-2">
           <p className="w-[320px] text-[#6C7086] text-center ">
-            Access the Aupay panel using your username and password.
+            Access the JJ admin panel using your username and password.
           </p>
         </div>
         <form onSubmit={handleSubmit}>
