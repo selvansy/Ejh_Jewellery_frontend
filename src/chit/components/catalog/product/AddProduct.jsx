@@ -64,7 +64,7 @@ const AddProduct = () => {
     showprice: "",
     makingCharges: {
       mode: "amount",
-      actualValue: "",
+      actualValue: 0,
       discountedValue: "",
       discountedPercentage: "",
       discountView: false,
@@ -72,7 +72,7 @@ const AddProduct = () => {
     },
     wastageCharges: {
       mode: "amount",
-      actualValue: "",
+      actualValue: 0,
       discountedValue: "",
       discountedPercentage: "",
       discountView: false,
@@ -205,6 +205,7 @@ const AddProduct = () => {
     mutationFn: (id) => productbyid(id),
     onSuccess: (response) => {
       setResponseData(response)
+      console.log(response.data)
       setMakingCharge(response.data)
       setFormData(response.data);
       setproductImgPath(response.data.product_image);
@@ -275,9 +276,9 @@ const AddProduct = () => {
   const { mutate: editProduct } = useMutation({
     mutationFn: (formData) => updateproduct(formData),
     onSuccess: (response) => {
+      naviagte("/catalog/product")
       if (response.message) {
         toast.success(response.message);
-        naviagte("/catalog/product/");
       }
       setIsLoading(false);
     },
@@ -478,7 +479,7 @@ const AddProduct = () => {
             subKey === "_id" &&
             (key === "wastageCharges" || key === "makingCharges")
           ) {
-            ;
+            
             return;
           }
           formDataToSend.append(`${key}[${subKey}]`, subValue);

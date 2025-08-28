@@ -182,6 +182,7 @@ const Product = () => {
     {
       header: "Image",
       cell: (row) => (
+        //  console.log(`${row.pathurl}${row.product_image[0]}`)
         <div className="w-12 h-12 rounded overflow-hidden">
           <img
             src={`${row.pathurl}${row.product_image[0]}`}
