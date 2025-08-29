@@ -18,7 +18,7 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/ejh.jpg";
 import RouteList from "../../../routes/RouteList";
 import { useLocation, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
@@ -684,7 +684,7 @@ const Base = ({ renderContent: RenderContent }) => {
         style={{ backgroundColor: sidebar_color }}
       >
         <div className="flex justify-center items-center">
-          <img src={logo} alt="Logo" className="h-20 w-45 object-fill mb-4" />
+          <img src={logo} alt="Logo" className="h-34 w-60 object-fill mb-4" />
         </div>
 
         <nav className="flex-1 text-white scrollbar-hide overflow-y-auto text-sm font-semibold">
