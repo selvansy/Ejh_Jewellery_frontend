@@ -89,7 +89,7 @@ const Login = () => {
         </div>
         <div className="flex justify-center mb-4 -mt-2">
           <p className="w-[320px] text-[#6C7086] text-center ">
-            Access the JJ admin panel using your username and password.
+            Access the Eskeml Jewellery House admin panel using your username and password.
           </p>
         </div>
         <form onSubmit={handleSubmit}>
